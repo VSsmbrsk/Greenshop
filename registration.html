@@ -4,43 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Greenshop</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div style="max-width: 500px; border: solid 1px silver; margin: auto; padding: 52px 100px 50px; box-sizing: border-box; border-bottom: solid 10px #46A358;">
-        <a href="#" style="display: flex; justify-content: flex-end;">
+    <div class="container">
+        <a href="#" class="pic">
            <img src="images/Frame1.png" alt="logo">  
         </a>
-    <h1 style="text-align: center; font-weight: 500;
-               font-size: 20px;
-               line-height: 80%;
-               color: #3d3d3d; margin-bottom: 40px;">Login I <span style="color: #46a358;">Register</span></h1>
-    <p style="font-size: 13px; font-weight: 400; line-height: 123%; color: #3d3d3d; margin-bottom: 14px;">Enter your email and password to register.</p>
+    <h1 class="title">Login I <span>Register</span></h1>
+    <p class="text">Enter your email and password to register.</p>
     <form action="" method="post" name="login">
-        <input style="width: 100%; border: 1px solid #eaeaea; border-radius: 5px; padding: 12px 14px; margin-bottom: 16px;" type="text" name="username" placeholder="Username">
-        <input style="width: 100%; border: 1px solid #eaeaea; border-radius: 5px; padding: 12px 14px; margin-bottom: 16px;" type="text" name="email" placeholder="Enter your email address">
-        <input style="width: 100%; border: 1px solid #eaeaea; border-radius: 5px; padding: 12px 14px; margin-bottom: 16px;" type="text" name="password" placeholder="Password">
-        <input style="width: 100%; border: 1px solid #eaeaea; border-radius: 5px; padding: 12px 14px; margin-bottom: 41px;" type="text" name="confirm password" placeholder="Confirm Password">
+        <input class="input-field" type="text" name="username" placeholder="Username">
+        <input class="input-field" type="text" name="email" placeholder="Enter your email address">
+        <input class="input-field" type="text" name="password" placeholder="Password">
+        <input class="input-confirm" type="text" name="confirm password" placeholder="Confirm Password">
     </form>
-        <button type="submit" style="width: 100%; text-align: center; background-color: #46A358; color: #FFFFFF;font-size: 16px; font-weight: 700; border: none; border-radius: 5px;">Register</button>
-            <p style="width: 100%; font-size: 14px;"><img src="images/Line7.png" style="margin-right: 6px; margin-bottom: 4px;">Or register with<img src="images/Line7.png" style="margin-left: 6px; margin-bottom: 4px;"></p>
-        <a href="#" style="width: 100%; display: flex; justify-content: center;align-items: center; gap: 9px; border: 1px solid #eaeaea;
-             border-radius: 5px;
-             font-weight: 500;
-             font-size: 13px;
-             line-height: 123%;
-             margin-bottom: 16px;
-             text-align: center;
-             color: #727272; padding: 10px 0; text-decoration: none;">            
+        <button class="btn" type="submit">Register</button>
+            <p class="desc"><img src="images/Line7.png" class="line-right">Or register with<img src="images/Line7.png" class="line-left"></p>
+        <a href="#" class="link-google">            
              <img src="images/google1.svg" alt="google">
              Continue with Google
             </a>
-            <a href="#" style="width: 100%; display: flex; justify-content: center;align-items: center; gap: 9px; border: 1px solid #eaeaea;
-             border-radius: 5px;
-             font-weight: 500;
-             font-size: 13px;
-             line-height: 123%;
-             text-align: center;
-             color: #727272; padding: 10px 0; text-decoration: none;">            
+            <a href="#" class="link-facebook">            
              <img src="images/facebook1.svg" alt="facebook">
              Continue with Facebook
             </a>
