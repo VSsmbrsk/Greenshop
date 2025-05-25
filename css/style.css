@@ -97,3 +97,104 @@
     padding: 10px 0;
     text-decoration: none; 
 }
+.header{
+    padding-top: 30px;
+}
+.index-container{
+    max-width: 1200px; 
+    margin: auto; 
+}
+.box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.30px solid rgba(70, 163, 88, 0.5);
+}
+.list ul{
+    display: flex;
+    gap: 50px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.menu{
+    font-weight: 400;
+    font-size: 16px;
+    color: #3d3d3d; 
+    text-decoration: none;
+}
+.menu__home{
+    font-weight: 700;
+    font-size: 16px;
+    color: #3d3d3d;
+    text-decoration: none;
+    border-bottom: 3px solid #46a358;
+}
+.login{
+    width: 100px;
+    display: inline-flex;
+    align-items: center;  
+    gap: 4px;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 123%;
+    text-align: center;
+    color: #fff; 
+    background-color: #46a358;
+    padding: 8px 17px 7px 41px;
+    text-decoration: none;
+}
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5f5f5;
+    margin-top: 23px;
+    padding: 68px 20px 85px;
+}
+.index-container h3{
+    font-size: 14px;
+    line-height: 114%;
+    text-transform: uppercase;
+    color: #3d3d3d;
+    margin-bottom: 7px;
+}
+.index-container h1{
+    height: 140px; 
+    font-weight: 900;
+    font-size: 70px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: #3d3d3d; 
+    margin-bottom: 5px;
+}
+.index-container span{
+    color: #46a358;
+}
+.index-container p{
+    max-width: 560px; 
+    height: 45px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 171%;
+    color: #727272;
+    margin-bottom: 44px;
+}
+.link-shop{
+    background-color: #46a358;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 125%;
+    text-transform: uppercase; 
+    color: #fff;
+    border: none; 
+    border-radius: 5px;
+    padding: 11px 27px;
+    text-decoration: none;
+}
+.frame{
+    display: flex;
+    align-items: flex-end;
+    max-width: 507px;
+}
