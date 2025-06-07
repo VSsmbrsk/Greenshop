@@ -46,7 +46,7 @@
     font-display: swap;
 }
 
-.container{
+.container__register{
     max-width: 500px;
     border: solid 1px silver;
     margin: auto; 
@@ -164,7 +164,7 @@
 .header{
     padding-top: 30px;
 }
-.index-container{
+.container{
     max-width: 1200px; 
     margin: auto; 
 }
@@ -215,8 +215,9 @@
     background-color: #fbfbfb;
     margin-top: 23px;
     padding: 68px 20px 85px;
+    box-sizing: border-box;
 }
-.index-container h3{
+.wrapper h3{
     font-size: 14px;
     line-height: 114%;
     text-transform: uppercase;
@@ -224,7 +225,7 @@
     margin-bottom: 7px;
     font-family: 'Cera Pro';
 }
-.index-container h1{
+.wrapper h1{
     height: 140px; 
     font-weight: 900;
     font-size: 70px;
@@ -238,7 +239,7 @@
 .wrapper span{
     color: #46a358;
 }
-.index-container p{
+.wrapper p{
     max-width: 560px; 
     height: 45px;
     font-weight: 400;
