@@ -174,6 +174,9 @@
     align-items: center;
     border-bottom: 0.30px solid rgba(70, 163, 88, 0.5);
 }
+.logo{
+    margin-bottom: 17px;
+}
 .list ul{
     display: flex;
     gap: 50px;
@@ -181,17 +184,29 @@
     margin: 0;
     padding: 0;
 }
+
+.list ul li::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: #46A358;
+    margin-top: 22px;
+    transition: 0,4s;
+}
+.list ul li:hover::after{
+    width: 100%;
+}
 .menu{
     font-weight: 400;
     font-size: 16px;
     color: #3d3d3d; 
     text-decoration: none;
     font-family: 'Cera Pro';
+    line-height: 30px;
 }
 .menu:hover{
-    border-bottom: #46A358 solid 3px;
     font-weight: bold;
-    transition: 0.3s;
 }
 .login{
     display: inline-flex;
@@ -207,6 +222,7 @@
     padding: 8px 17px;
     text-decoration: none;
     font-family: 'Cera Pro';
+    margin-bottom: 18px;
 }
 .wrapper{
     display: flex;
@@ -364,31 +380,113 @@
     width: 100%;
     gap: 70px 33px;
 }
-.supplies span{
-    display: block;
+.supplies_div{
+    position: relative;
+    width: 258px;
+    overflow: hidden;
+}
+.supplies_card{
+    text-decoration: none;
+}
+.supplies_div_card{
+    width: 258px;
+    height: 300px;
+    background-color: #fbfbfb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .supplies a{
     text-decoration: none;
-    max-width: 258px;
-    height: 350px;
 }
-.supplies img{
-    background-color: #fbfbfb;
+.supplies ul{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 27px;
+    bottom: -40px;
+    left: 0;
+    padding: 0;
+    transition: 0,5s;
+}
+.supplies li{
+    list-style: none;
 }
 .name{
+    display: block;
     font-family: 'Cera Pro';
     font-weight: 400;
     font-size: 16px;
     line-height: 100%;
     color: #3d3d3d;
-    padding-bottom: 6px;
+    padding-top: 12px;
 }
 .price{
+    display: block;
     font-family: 'Cera Pro';
     font-weight: 700;
     font-size: 18px;
     line-height: 89%;
     color: #46a358;
+    padding-top: 6px;
+}
+.supplies_div:hover{
+    border-top: #46A358 solid 1px;
+}
+.supplies_div:hover ul{
+    bottom: 40px;
+}
+.supplies_div ul li:first-of-type a::after{
+    display: block;
+    content: "";
+    background-image: url(../images/cart.svg);
+    width: 20px;
+    height: 20px;
+}
+.supplies_div ul li:nth-last-of-type(2) a::after{
+    display: block;
+    content: "";
+    background-image: url(../images/heart.svg);
+    width: 20px;
+    height: 20px;
+}
+.supplies_div ul li:last-of-type a::after{
+    display: block;
+    content: "";
+    background-image: url(../images/magn_glass.svg);
+    width: 20px;
+    height: 20px;
+}
+.supplies_div ul li:first-of-type:hover a::after{
+    background-image: url(../images/cart_hover.svg);
+}
+.supplies_div ul li:nth-last-of-type(2):hover a::after{
+    background-image: url(../images/heart_hover.svg)
+}
+.supplies_div ul li:last-of-type:hover a::after{
+    background-image: url(../images/magn_glass_hover.svg)
+}
+.off{
+    background-color: #46A358;
+    padding: 8px;
+    position: absolute;
+    top: 14px;
+    left: 0;
+    font-family: 'Cera Pro';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    color: #fff;
+}
+.price_off{
+    font-family: 'Cera Pro';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 89%;
+    color: #a5a5a5;
+    text-decoration: line-through;
+    margin-left: 16px;
 }
 .numbers{
     display: flex;
@@ -424,6 +522,9 @@
     line-height: 89%;
     color: #fff;
     background-color: #46A358;
+}
+.numbers__link:hover svg path{
+    stroke: white;
 }
 .blog_find_more{
     display: flex;
