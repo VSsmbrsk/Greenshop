@@ -45,7 +45,11 @@
     font-style: normal;
     font-display: swap;
 }
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 .container__register{
     max-width: 500px;
     border: solid 1px silver;
@@ -161,7 +165,7 @@
     text-decoration: none; 
     font-family: 'Cera Pro';
 }
-.header{
+header{
     padding-top: 30px;
 }
 .container{
@@ -172,19 +176,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 0.30px solid rgba(70, 163, 88, 0.5);
+    border-bottom: 1px solid rgba(70, 163, 88, 0.5);
 }
 .logo{
     margin-bottom: 17px;
 }
-.list ul{
+.list__ul{
     display: flex;
     gap: 50px;
     list-style: none;
-    margin: 0;
-    padding: 0;
 }
-
 .list ul li::after{
     content: "";
     display: block;
@@ -197,6 +198,12 @@
 .list ul li:hover::after{
     width: 100%;
 }
+.list ul li:hover .menu{
+    font-weight: bold;
+}
+.list ul li ul li::after{
+    display: none;
+}
 .menu{
     font-weight: 400;
     font-size: 16px;
@@ -205,7 +212,89 @@
     font-family: 'Cera Pro';
     line-height: 30px;
 }
-.menu:hover{
+.list ul li ul li a{
+    font-weight: 400;
+    font-size: 16px;
+    color: #3d3d3d; 
+    text-decoration: none;
+    font-family: 'Cera Pro';
+    line-height: 30px;
+}
+.dropdown{
+    position: relative;
+    margin-bottom: -80px;
+}
+.submenu{
+    position: absolute;
+    left: -55px;
+    top: 79px;
+    min-width: 188px;
+    list-style: none;
+    display: none;
+    z-index: 99;
+}
+.priming_submenu{
+    font-weight: 400;
+    font-size: 16px;
+    color: #3d3d3d; 
+    text-decoration: none;
+    font-family: 'Cera Pro';
+    line-height: 30px;
+}
+.dropdown:hover .submenu {
+    display: block;
+}
+.submenu li{
+    background-color: #edf6ee;
+    padding: 7px 14px;
+}
+.submenu li:hover{
+    background-color: #1a712a;
+}
+.submenu li:hover .drop_menu{
+    color: #fff;
+    font-weight: bold;
+}
+.dropdown_priming{
+    position: relative;
+}
+.arrows{
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    right: 15px;
+    top: 16px; 
+}  
+.arrow-hover{
+    display: none;
+} 
+.dropdown_priming:hover .arrow-first{
+    display: none;
+}
+.dropdown_priming:hover .arrow-hover{
+    display: block;
+}
+.submenu_second{
+    position: absolute;
+    top: -132px;
+    left: 100%;
+    min-width: 188px;
+    display: none;
+    z-index: 100;
+    list-style: none;
+}
+.dropdown_priming:hover .submenu_second{
+    display: block;
+}
+.submenu_second li{
+    padding: 7px 14px;
+    background-color: #edf6ee;
+}
+.submenu_second li:hover{
+    background-color: #1a712a;
+}
+.submenu_second li:hover a{
+    color: #fff;
     font-weight: bold;
 }
 .login{
@@ -230,8 +319,9 @@
     align-items: center;
     background-color: #fbfbfb;
     margin-top: 23px;
-    padding: 68px 20px 85px;
-    box-sizing: border-box;
+}
+.texts{
+    padding-left: 41px;
 }
 .wrapper h3{
     font-size: 14px;
@@ -242,14 +332,11 @@
     font-family: 'Cera Pro';
 }
 .wrapper h1{
-    height: 140px; 
     font-weight: 900;
     font-size: 70px;
     line-height: 100%;
     text-transform: uppercase;
-    color: #3d3d3d;
-    margin-top: 0; 
-    margin-bottom: 5px;
+    color: #3d3d3d; 
     font-family: 'Cera Pro';
 }
 .wrapper span{
@@ -302,7 +389,8 @@
     font-size: 15px;
     line-height: 267%;
     font-weight: 400;
-    list-style: none;   
+    list-style: none;
+    padding-left: 30px;   
 }
 .list__shorts a:hover{
     font-weight: 700;
@@ -379,6 +467,7 @@
     flex-wrap: wrap;
     width: 100%;
     gap: 70px 33px;
+    margin-top: 31px;
 }
 .supplies_div{
     position: relative;
@@ -408,7 +497,6 @@
     gap: 27px;
     bottom: -40px;
     left: 0;
-    padding: 0;
     transition: 0,5s;
 }
 .supplies li{
@@ -436,7 +524,7 @@
     border-top: #46A358 solid 1px;
 }
 .supplies_div:hover ul{
-    bottom: 40px;
+    bottom: 60px;
 }
 .supplies_div ul li:first-of-type a::after{
     display: block;
@@ -531,6 +619,7 @@
     display: flex;
     justify-content: space-between;
     gap: 28px;
+    margin-top: 20px;
 }
 .blog{
     max-width: 586px;
@@ -600,6 +689,7 @@
     line-height: 171%;
     text-align: center;
     color: #727272;
+    margin: 15px 0 35px;
 }
 .article__blogs{
     display: flex;
