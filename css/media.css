@@ -113,6 +113,10 @@
     }
 }
 @media (max-width: 800px) {
+    .wrapper{
+        width: 100%;
+        overflow: hidden;
+    }
     .wrapper p{
         margin-bottom: 85px;
     }
@@ -272,6 +276,13 @@
         margin: auto;
     }
   }
+@media (max-width: 430px) {
+    .blog_find_more{
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+}
 @media (max-width: 414px) {
     .desc::before{
         width: 55px;
