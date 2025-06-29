@@ -409,6 +409,9 @@ header{
     height: 790px;
     background-color: #fbfbfb;
 }
+.shorts li{
+    list-style: none;
+}
 .categories{
     font-family: 'Cera Pro';
     font-weight: bold;
@@ -417,13 +420,13 @@ header{
     color: #3d3d3d;
     padding-top: 14px;
     padding-left: 18px;
+    text-decoration: none;
 }
 .list__shorts{
     font-family: 'Cera Pro';
     font-size: 15px;
     line-height: 267%;
     font-weight: 400;
-    list-style: none;
     padding-left: 30px;   
 }
 .list__shorts a:hover{
