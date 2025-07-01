@@ -1,0 +1,306 @@
+.shorts{
+    max-width: 310px;
+    height: 790px;
+    background-color: #fbfbfb;
+    ul{
+        padding: 14px 0 0 16px;
+
+    }
+    li{
+        list-style: none;
+    }
+    img{
+        margin-top: 346px;
+    }
+}
+.categories{
+    font: {
+        family: 'Cera Pro';
+        size: 18px;
+        weight: bold;
+      }
+    line-height: 89%;
+    color: #3d3d3d;
+    text-decoration: none;
+}
+.list__shorts{
+    font: {
+        family: 'Cera Pro';
+        size: 15px;
+        weight: 400;
+      }
+    line-height: 267%;
+    padding-left: 30px;  
+    a{
+        text-decoration: none;
+        color: #3d3d3d;
+        transition: 0.3s;
+        &:hover{
+            font-weight: 700;
+            color: #46a358;
+        } 
+    } 
+}
+.market{
+    display: flex;
+    gap: 50px;
+    margin-bottom: 20px;
+}
+.parent{
+    max-width: 840px;
+}
+.supplies_menu{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 31px;
+}
+.menu__left{
+    ul{
+        display: flex;
+        gap: 37px;
+    }
+    li{
+        font: {
+            family: 'Cera Pro';
+            size: 15px;
+            weight: 400;
+          }
+        line-height: 107%;
+        color: #3d3d3d;
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+        color: #3d3d3d;
+        &:hover{
+            font-weight: 700;
+            color: #46a358;
+            border-bottom: #46A358 solid 2px;
+        }
+    }
+}
+.text__right{
+    font: {
+        family: 'Cera Pro';
+        size: 15px;
+        weight: 400;
+      }
+    line-height: 107%;
+    color: #3d3d3d;
+    span{
+        font: {
+            family: 'Cera Pro';
+            size: 15px;
+            weight: 400;
+          }
+        padding-left: 8px;
+        line-height: 107%;
+        color: #3d3d3d;
+    }
+    &::after{
+        display: inline-block;
+        content: "";
+        background-image: url(../images/Arrow.svg);
+        width: 16px;
+        height: 12px; 
+    }
+}
+.supplies{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 70px 33px;
+    margin-bottom: 90px;
+    a{
+        text-decoration: none;
+    }
+    ul{
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 27px;
+        bottom: -40px;
+        left: 0;
+        transition: 0.5s; 
+    }
+    li{
+        list-style: none;
+    }
+}
+.supplies_div{
+    position: relative;
+    width: 258px;
+    overflow: hidden;
+    border-top: 1px solid transparent;
+    &:hover{
+        border-top: #46A358 solid 1px;
+        ul{
+            bottom: 60px;
+            li{
+                &:first-of-type{
+                    a{
+                        &::after{
+                            display: block;
+                            content: "";
+                            background-image: url(../images/cart.svg);
+                            width: 20px;
+                            height: 20px;                        
+                        }
+                    }
+                    &:hover{
+                        a{
+                            &::after{
+                                background-image: url(../images/cart_hover.svg); 
+                            }
+                        }
+                    }
+                }
+                &:nth-last-child(2){
+                    a{
+                        &::after{
+                            display: block;
+                            content: "";
+                            background-image: url(../images/heart.svg);
+                            width: 20px;
+                            height: 20px;                        
+                        }
+                    }
+                    &:hover{
+                        a{
+                            &::after{
+                                background-image: url(../images/heart_hover.svg); 
+                            }
+                        }
+                    }
+                }
+                &:last-of-type{
+                    a{
+                        &::after{
+                            display: block;
+                            content: "";
+                            background-image: url(../images/magn_glass.svg);
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                    &:hover{
+                        a{
+                            &::after{
+                                background-image: url(../images/magn_glass_hover.svg);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.supplies_card{
+    text-decoration: none;
+}
+.supplies_div_card{
+    width: 258px;
+    height: 300px;
+    background-color: #fbfbfb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.name{
+    display: block;
+    font: {
+        family: 'Cera Pro';
+        size: 16px;
+        weight: 400;
+      }
+    line-height: 100%;
+    color: #3d3d3d;
+    padding-top: 12px;
+}
+.price{
+    display: block;
+    font: {
+        family: 'Cera Pro';
+        size: 18px;
+        weight: 700;
+      }
+    line-height: 89%;
+    color: #46a358;
+    padding-top: 6px;
+}
+.off{
+    background-color: #46A358;
+    padding: 8px;
+    position: absolute;
+    top: 14px;
+    left: 0;
+    font: {
+        family: 'Cera Pro';
+        size: 16px;
+        weight: 500;
+      }
+    line-height: 100%;
+    color: #fff;
+}
+.price_off{
+    font: {
+        family: 'Cera Pro';
+        size: 18px;
+        weight: 400;
+      }
+    line-height: 89%;
+    color: #a5a5a5;
+    text-decoration: line-through;
+    margin-left: 16px;
+}
+.numbers{
+    display: flex;
+    justify-content: flex-end;
+    ul{
+        display: flex;
+        gap: 10px; 
+    }
+    li{
+        font: {
+            family: 'Cera Pro';
+            size: 18px;
+            weight: 300;
+          }
+        line-height: 89%;
+        color: #3d3d3d;
+        list-style: none;  
+    }
+    a{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #e5e5e5;
+        border-radius: 4px;
+        color: #3d3d3d;
+        width: 35px;
+        height: 35px;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+}
+.numbers__link{
+    &:hover{
+        font: {
+            family: 'Cera Pro';
+            size: 18px;
+            weight: 700;
+          }
+        line-height: 89%;
+        color: #fff;
+        background-color: #46A358;
+        svg{
+            path{
+                stroke: white; 
+            }
+        }
+    }
+}

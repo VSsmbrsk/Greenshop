@@ -1,0 +1,168 @@
+header {
+  padding-top: 30px;
+}
+
+.box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 23px;
+  border-bottom: 1px solid rgba(70, 163, 88, 0.5);
+}
+
+.logo {
+  margin-bottom: 17px;
+}
+
+.list__ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 50px;
+  list-style: none;
+}
+
+.list ul li::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background-color: #46A358;
+  margin-top: 22px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.list ul li:hover::after {
+  width: 100%;
+}
+
+.list ul li:hover .menu {
+  font-weight: bold;
+}
+
+.list ul li ul li::after {
+  display: none;
+}
+
+.list ul li ul li a {
+  font-weight: 400;
+  font-size: 16px;
+  color: #3d3d3d;
+  text-decoration: none;
+  font-family: 'Cera Pro';
+  line-height: 30px;
+}
+
+.menu,
+.priming_submenu {
+  font-weight: 400;
+  font-size: 16px;
+  font-family: 'Cera Pro';
+  color: #3d3d3d;
+  text-decoration: none;
+  line-height: 30px;
+}
+
+.dropdown {
+  position: relative;
+  margin-bottom: -80px;
+}
+
+.dropdown:hover .submenu {
+  display: block;
+}
+
+.submenu {
+  position: absolute;
+  left: -55px;
+  top: 79px;
+  min-width: 188px;
+  list-style: none;
+  display: none;
+  z-index: 99;
+}
+
+.submenu li:hover {
+  background-color: #1a712a;
+}
+
+.submenu li:hover .drop_menu {
+  color: #fff;
+  font-weight: bold;
+}
+
+.dropdown_priming {
+  position: relative;
+}
+
+.dropdown_priming:hover .arrow-first {
+  display: none;
+}
+
+.dropdown_priming:hover .arrow-hover {
+  display: block;
+}
+
+.dropdown_priming:hover .submenu_second {
+  display: block;
+}
+
+.arrows {
+  width: 13px;
+  height: 13px;
+  position: absolute;
+  right: 15px;
+  top: 16px;
+}
+
+.arrow-hover {
+  display: none;
+}
+
+.submenu_second {
+  position: absolute;
+  top: -132px;
+  left: 100%;
+  min-width: 188px;
+  display: none;
+  z-index: 100;
+  list-style: none;
+}
+
+.submenu_second li:hover {
+  background-color: #1a712a;
+}
+
+.submenu_second li:hover a {
+  color: #fff;
+  font-weight: bold;
+}
+
+.login {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4px;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 16px;
+  font-family: 'Cera Pro';
+  line-height: 123%;
+  text-align: center;
+  color: #fff;
+  background-color: #46a358;
+  padding: 8px 17px;
+  text-decoration: none;
+  margin-bottom: 18px;
+}
+/*# sourceMappingURL=header.css.map */

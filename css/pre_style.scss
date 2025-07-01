@@ -1,0 +1,117 @@
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('../fonts/CeraPro-Regular.eot');
+    src: url('../fonts/CeraPro-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/CeraPro-Regular.woff2') format('woff2'),
+        url('../fonts/CeraPro-Regular.woff') format('woff'),
+        url('../fonts/CeraPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('../fonts/CeraPro-Black.eot');
+    src: url('../fonts/CeraPro-Black.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/CeraPro-Black.woff2') format('woff2'),
+        url('../fonts/CeraPro-Black.woff') format('woff'),
+        url('../fonts/CeraPro-Black.ttf') format('truetype'),
+        url('../fonts/CeraPro-Black.svg#CeraPro-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face{
+    font-family: 'Cera Pro';
+    src: url('../fonts/CeraPro-Bold.eot');
+    src: url('../fonts/CeraPro-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/CeraPro-Bold.woff2') format('woff2'),
+         url('../fonts/CeraPro-Bold.woff') format('woff'),
+         url('../fonts/CeraPro-Bold.ttf') format('truetype'),
+         url('../fonts/CeraPro-Bold.svg#CeraPro-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+} 
+@font-face{
+    font-family: 'Cera Pro';
+    src: url('../fonts/CeraPro-Medium.eot');
+    src: url('../fonts/CeraPro-Medium.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/CeraPro-Medium.woff2') format('woff2'),
+         url('../fonts/CeraPro-Medium.woff') format('woff'),
+         url('../fonts/CeraPro-Medium.ttf') format('truetype'),
+         url('../fonts/CeraPro-Medium.svg#CeraPro-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+} 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.loader-wrapper{
+    position: fixed;
+    inset: 0;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    animation: examp 4s forwards;
+}
+@keyframes examp{
+    0%{opacity: 1; visibility: visible;}
+    50%{opacity: 0.5; visibility: visible;}
+    100%{opacity: 0; visibility: hidden;}
+}
+
+@import 'registration';
+
+.container{
+    max-width: 1200px; 
+    margin: auto; 
+}
+
+@import 'header';
+
+@import 'section_one';
+
+@import 'section_two';
+
+@import 'section_three';
+
+@import 'last_section';
+
+@import 'footer';
+
+.loader {
+    width: 50px;
+    aspect-ratio: 1;
+    display: grid;
+    &::before,
+    &::after{
+        content:"";
+        grid-area: 1/1;
+        grid-row: 1;
+        grid-column: 1;
+        --c:no-repeat radial-gradient(farthest-side,#46a358 92%,#0000);
+        background: 
+          var(--c) 50%  0%, 
+          var(--c) 50%  100%,
+          var(--c) 100%  50%,
+          var(--c) 0%  50%; 
+        background-size: 12px 9px;
+        animation: preload 1s 5;
+    }
+    &::before{
+        margin: 4px;
+        filter: hue-rotate(20deg);
+        background-size: 9px 7px;
+        animation-timing-function: linear    
+    }
+}
+@keyframes preload{ 
+    100%{transform: rotate(.5turn)}
+}
+

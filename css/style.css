@@ -418,8 +418,6 @@ header{
     font-size: 18px;
     line-height: 89%;
     color: #3d3d3d;
-    padding-top: 14px;
-    padding-left: 18px;
     text-decoration: none;
 }
 .list__shorts{
@@ -589,10 +587,10 @@ header{
     background-image: url(../images/cart_hover.svg);
 }
 .supplies_div ul li:nth-last-of-type(2):hover a::after{
-    background-image: url(../images/heart_hover.svg)
+    background-image: url(../images/heart_hover.svg);
 }
 .supplies_div ul li:last-of-type:hover a::after{
-    background-image: url(../images/magn_glass_hover.svg)
+    background-image: url(../images/magn_glass_hover.svg);
 }
 .off{
     background-color: #46A358;

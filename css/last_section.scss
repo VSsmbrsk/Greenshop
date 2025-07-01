@@ -1,0 +1,95 @@
+.our__blog_title{
+    font: {
+        family: 'Cera Pro';
+        size: 30px;
+        weight: 700;
+      }
+    line-height: 53%;
+    text-align: center;
+    color: #3d3d3d;
+}
+.our__blog_text{
+    font: {
+        family: 'Cera Pro';
+        size: 14px;
+        weight: 400;
+      }
+    line-height: 171%;
+    text-align: center;
+    color: #727272;
+    margin: 15px 0 35px;
+}
+.article__blogs{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 42px;
+    margin-bottom: 30px;
+}
+.article{
+    max-width: 268px;
+    background-color: #fbfbfb;
+    padding-bottom: 12px;
+    span{
+        font: {
+            family: 'Cera Pro';
+            size: 14px;
+            weight: 500;
+          }
+        line-height: 114%;
+        color: #46a358;
+        padding-left: 15px;
+    }
+    h2{
+        font: {
+            family: 'Cera Pro';
+            size: 20px;
+            weight: 700;
+          }
+        line-height: 130%;
+        color: #3d3d3d;
+        padding-left: 15px;
+    }
+    p{
+        font: {
+            family: 'Cera Pro';
+            size: 14px;
+            weight: 400;
+          }
+        line-height: 157%;
+        color: #727272;
+        max-width: 242px;
+        padding: 0 0 9px 15px; 
+    }
+    a{
+        font: {
+            family: 'Cera Pro';
+            size: 14px;
+            weight: 500;
+          }
+        line-height: 114%;
+        color: #3d3d3d;
+        text-decoration: none;
+        padding-left: 15px;
+        &::after{
+            display: inline-block;
+            content: "";
+            background-image: url(../images/Arrow4.svg);
+            width: 16px;
+            height: 12px;
+            margin-left: 3px;
+        }
+        &:hover{
+            font: {
+                family: 'Cera Pro';
+                size: 14px;
+                weight: 500;
+              }
+            line-height: 114%;
+            color: #46a358;
+            &::after{
+                background-image: url(../images/Arrow_green.svg);
+            }
+        }
+    }
+}

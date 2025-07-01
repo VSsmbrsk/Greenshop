@@ -1,0 +1,82 @@
+.blog_find_more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 28px;
+  margin-bottom: 138px;
+}
+
+.blog {
+  max-width: 586px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fbfbfb;
+}
+
+.blog a {
+  display: inline-block;
+  font-family: 'Cera Pro';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 143%;
+  color: #fff;
+  background-color: #46a358;
+  border-radius: 6px;
+  text-align: center;
+  text-decoration: none;
+  padding: 11px 28px;
+}
+
+.blog a::after {
+  display: inline-block;
+  content: "";
+  background-image: url(../images/Arrow3.svg);
+  width: 14px;
+  height: 10px;
+  background-repeat: no-repeat;
+  margin-left: 2px;
+}
+
+.find__more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-right: 30px;
+}
+
+.find__more h3 {
+  font-family: 'Cera Pro';
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 133%;
+  text-transform: uppercase;
+  text-align: right;
+  color: #3d3d3d;
+}
+
+.find__more p {
+  font-family: 'Cera Pro';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 171%;
+  text-align: right;
+  color: #727272;
+}
+/*# sourceMappingURL=section_three.css.map */

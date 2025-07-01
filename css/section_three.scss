@@ -1,0 +1,64 @@
+.blog_find_more{
+    display: flex;
+    justify-content: space-between;
+    gap: 28px;
+    margin-bottom: 138px;
+}
+.blog{
+    max-width: 586px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fbfbfb;
+    a{
+        display: inline-block;
+        font: {
+            family: 'Cera Pro';
+            size: 14px;
+            weight: 500;
+          }
+        line-height: 143%;
+        color: #fff;
+        background-color: #46a358; 
+        border-radius: 6px; 
+        text-align: center;
+        text-decoration: none;
+        padding: 11px 28px; 
+        &::after{
+            display: inline-block;
+            content: "";
+            background-image: url(../images/Arrow3.svg);
+            width: 14px;
+            height: 10px;
+            background-repeat: no-repeat;
+            margin-left: 2px;        
+        }
+    }
+}
+.find__more{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 30px;
+    h3{
+        font: {
+            family: 'Cera Pro';
+            size: 18px;
+            weight: 900;
+          }
+        line-height: 133%;
+        text-transform: uppercase;
+        text-align: right;
+        color: #3d3d3d;  
+    }
+    p{
+        font: {
+            family: 'Cera Pro';
+            size: 14px;
+            weight: 400;
+          }
+        line-height: 171%;
+        text-align: right;
+        color: #727272;
+    }
+}
