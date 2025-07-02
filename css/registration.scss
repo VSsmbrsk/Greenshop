@@ -4,7 +4,10 @@
     margin: auto;
     padding: 52px 100px 50px;
     box-sizing: border-box;
-    border-bottom: 10px solid #46A358;
+    border-bottom: 10px solid $primary-color;
+    @include max-screen(390px){
+      padding: 52px 70px 50px;
+    }
 }
 .pic{
     display: flex;
@@ -13,40 +16,40 @@
 .title {
     text-align: center;
     font: {
-      family: 'Cera Pro';
-      weight: 500;
+      family: $main-font;
+      weight: $f-weight-medium;
       size: 20px;
     }
     line-height: 80%;
-    color: #3d3d3d;
+    color: $text-color;
     margin-bottom: 40px;
 }
 .letter {
     font: {
-      family: 'Cera Pro';
-      weight: 250;
-      size: 18px;
+      family: $main-font;
+      weight: $f-weight-hairline;
+      size: $f-size-md;
     }
     line-height: 89%;
-    color: #3d3d3d;
+    color: $text-color;
 }
 .word{
-    color: #46a358;
+    color: $primary-color;
 } 
 .text{
     font: {
-      family: 'Cera Pro';
-      size: 13px;
-      weight: 400;
+      family: $main-font;
+      size: $f-size-sm;
+      weight: $f-weight-regular;
     }
     line-height: 123%;
-    color: #3d3d3d;
+    color: $text-color;
     margin-bottom: 14px;
 }
 .input-field,
 .input-confirm{
     width: 100%;
-    border: 1px solid #eaeaea;
+    border: 1px solid $border-color;
     border-radius: 5px;
     padding: 12px 14px;
 } 
@@ -61,12 +64,12 @@
     width: 100%;
     height: 45px;
     text-align: center;
-    background-color: #46A358;
-    color: #fff;
+    background-color: $primary-color;
+    color: $white;
     font: {
-      family: 'Cera Pro';
-      size: 16px;
-      weight: 700;
+      family: $main-font;
+      size: $f-size-base;
+      weight: $f-weight-bold;
     }
     border: none;
     border-radius: 5px;
@@ -74,12 +77,12 @@
 }
 .desc{
     font: {
-      family: 'Cera Pro';
-      size: 13px;
-      weight: 400;
+      family: $main-font;
+      size: $f-size-sm;
+      weight: $f-weight-regular;
     }
     line-height: 123%;
-    color: #3d3d3d;
+    color: $text-color;
     margin-bottom: 27px;
     text-align: center;
     position: relative;
@@ -93,6 +96,21 @@
       height: 1px;
       position: absolute;
       bottom: 7px;
+      @include max-screen(440px){
+        width: 67px;
+      }
+      @include max-screen(414px){
+        width: 55px;
+      }
+      @include max-screen(390px){
+        width: 67px;
+      }
+      @include max-screen(360px){
+        width: 60px;
+      }
+      @include max-screen(320px){
+        width: 40px;
+      }
     }
     &::before{
       left: 0;
@@ -107,18 +125,18 @@
     justify-content: center;
     align-items: center;
     gap: 9px;
-    border: 1px solid #eaeaea;
+    border: 1px solid $border-color;
     border-radius: 5px;
     font: {
-      family: 'Cera Pro';
-      size: 13px;
-      weight: 500;
+      family: $main-font;
+      size: $f-size-sm;
+      weight: $f-weight-medium;
     }
     line-height: 123%;
     text-align: center;
     padding: 10px 0;
     text-decoration: none;
-    color: #727272;
+    color: $muted-text-color;
 }
 .link-google{
     @extend %btn-social;

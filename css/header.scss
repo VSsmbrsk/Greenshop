@@ -7,14 +7,35 @@ header{
     align-items: center;
     margin-bottom: 23px;
     border-bottom: 1px solid rgba(70, 163, 88, 0.5);
+    @include max-screen(1024px){
+        padding: 0 20px;
+    }
+    @include max-screen(440px){
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 0 15px;
+        margin-bottom: 15px;
+    }
 }
 .logo{
     margin-bottom: 17px;
+    @include max-screen(440px){
+        margin-bottom: 0;
+    }
 }
 .list__ul{
     display: flex;
     gap: 50px;
     list-style: none;
+    @include max-screen(440px){
+        gap: 25px;
+        width: 100%;
+    }
+    @include max-screen(320px){
+        gap: 15px;
+    }
+
 }
 .list{
     ul{
@@ -24,9 +45,12 @@ header{
                 display: block;
                 width: 0;
                 height: 3px;
-                background-color: #46A358;
+                background-color: $primary-color;
                 margin-top: 22px;
-                transition: 0.4s;  
+                transition: 0.4s; 
+                @include max-screen(440px){
+                    margin-top: 5px;
+                }
             }
             &:hover{
                 &::after{
@@ -43,12 +67,12 @@ header{
                     }
                     a{
                       font: {
-                          weight: 400;
-                          size: 16px;
+                          weight: $f-weight-regular;
+                          size: $f-size-base;
                       }
-                      color: #3d3d3d; 
+                      color: $text-color; 
                       text-decoration: none;
-                      font-family: 'Cera Pro';
+                      font-family: $main-font;
                       line-height: 30px;
                     }
                 }
@@ -59,17 +83,20 @@ header{
 .menu,
 .priming_submenu{
     font: {
-        weight: 400;
-        size: 16px;
-        family: 'Cera Pro';
+        weight: $f-weight-regular;
+        size: $f-size-base;
+        family: $main-font;
     }
-    color: #3d3d3d; 
+    color: $text-color; 
     text-decoration: none; 
     line-height: 30px;
 }
 .dropdown{
     position: relative;
     margin-bottom: -80px;
+    @include max-screen(440px){
+        margin-bottom: -75px;
+    }
     &:hover{
         .submenu{
             display: block;
@@ -84,11 +111,22 @@ header{
     list-style: none;
     display: none;
     z-index: 99;
+    @include max-screen(440px){
+        position: static;
+        display: none;
+        margin-top: 5px;
+        background-color: $dropdown-bd-color;
+        border-radius: 6px;
+        min-width: 120px;
+    }
     li{
+        background-color: $dropdown-bd-color;
+        padding: 7px 14px;
+        transition: 0.3s;
         &:hover{
-            background-color: #1a712a;
+            background-color: $primary-hover;
             .drop_menu{
-                color: #fff;
+                color: $white;
                 font-weight: bold;
             }
         }
@@ -114,6 +152,9 @@ header{
     position: absolute;
     right: 15px;
     top: 16px; 
+    @include max-screen(440px){
+        display: none;
+    }
 }  
 .arrow-hover{
     display: none;
@@ -126,11 +167,19 @@ header{
     display: none;
     z-index: 100;
     list-style: none;
+    @include max-screen(440px){
+        position: static;
+        display: none;
+        background-color: $dropdown-bd-color;
+        min-width: inherit;
+    }
     li{
+        background-color: $dropdown-bd-color;
+        padding: 7px 14px;
         &:hover{
-            background-color: #1a712a;
+            background-color: $primary-hover;
             a{
-                color: #fff;
+                color: $white;
                 font-weight: bold;
             }
         }
@@ -142,14 +191,14 @@ header{
     gap: 4px;
     border-radius: 5px;
     font: {
-        weight: 500;
-        size: 16px;
-        family: 'Cera Pro';
+        weight: $f-weight-medium;
+        size: $f-size-base;
+        family: $main-font;
     }
     line-height: 123%;
     text-align: center;
-    color: #fff; 
-    background-color: #46a358;
+    color: $white; 
+    background-color: $primary-color;
     padding: 8px 17px;
     text-decoration: none;
     margin-bottom: 18px;

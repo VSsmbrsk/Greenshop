@@ -1,9 +1,20 @@
 .part_top{
     display: flex;
-    background-color: #fbfbfb;
+    background-color: $bg-color;
     padding: 24px 25px;
     gap: 61px;
     position: relative;
+    @include max-screen(834px){
+       flex-wrap: wrap; 
+       justify-content: center;
+    }
+    @include max-screen(768px){
+        gap: 50px;  
+    }
+    @include max-screen(440px){
+        gap: 10px;
+        padding: 10px;
+    }
     &::before,
     &::after{
         content: "";
@@ -12,13 +23,51 @@
         width: 187px;
         height: 1px;
         background: rgba(70, 163, 88, 0.1);
-        transform: rotate(90deg);    
+        transform: rotate(90deg); 
+        @include max-screen(834px){
+            top: 127px;
+        } 
+        @include max-screen(440px){
+            display: none;
+        }  
     }
     &::before{
         left: 158px;
+        @include max-screen(1024px){
+            left: 100px;
+            top: 135px;
+            width: 210px;
+        }
+        @include max-screen(992px){
+            left: 85px;
+            width: 220px;
+        }
+        @include max-screen(834px){
+            left: 175px;
+            width: 195px;
+        }
+        @include max-screen(768px){
+            left: 155px;
+        }
     }
     &::after{
         left: 423px;
+        @include max-screen(1024px){
+            left: 305px;
+            top: 135px;
+            width: 210px;
+        }
+        @include max-screen(992px){
+            left: 280px;
+            width: 220px;
+        }
+        @include max-screen(834px){
+            left: 445px;
+            width: 195px;
+        }
+        @include max-screen(768px){
+            left: 410px;
+        }
     }
 }
 .card_description{
@@ -28,44 +77,44 @@
     }
     h3{
         font: {
-            family: 'Cera Pro';
+            family: $main-font;
             size: 17px;
-            weight: 700;
+            weight: $f-weight-bold;
           }
         line-height: 94%;
-        color: #3d3d3d;
+        color: $text-color;
         margin-bottom: 9px;    
     }
     p{
         font: {
-            family: 'Cera Pro';
-            size: 14px;
-            weight: 400;
+            family: $main-font;
+            size: $f-size-reg;
+            weight: $f-weight-regular;
           }
         line-height: 157%;
-        color: #727272;
+        color: $muted-text-color;
     }
 }
 .form_input{
     max-width: 354px;
     h3{
         font: {
-            family: 'Cera Pro';
-            size: 18px;
-            weight: 700;
+            family: $main-font;
+            size: $f-size-md;
+            weight: $f-weight-bold;
           }
         line-height: 89%;
-        color: #3d3d3d;
+        color: $text-color;
         margin-bottom: 25px;
     }
     p{
         font: {
-            family: 'Cera Pro';
-            size: 13px;
-            weight: 400;
+            family: $main-font;
+            size: $f-size-sm;
+            weight: $f-weight-regular;
           }
         line-height: 169%;
-        color: #727272;
+        color: $muted-text-color;
     }
 }
 .footer_input{
@@ -77,24 +126,24 @@
         padding: 12px 14px;
         border: none;
         font: {
-            family: 'Cera Pro';
-            size: 14px;
+            family: $main-font;
+            size: $f-size-reg;
           }
         border-radius: 6px;
         box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.06);
-        background: #fff;
+        background: $white;
         &::placeholder{
             color: #acacac;
         }
     }
     button{
         padding: 12px 26px;
-        background-color: #46A358;
-        color: #FFF;
+        background-color: $primary-color;
+        color: $white;
         font: {
-            family: 'Cera Pro';
-            size: 18px;
-            weight: 700;
+            family: $main-font;
+            size: $f-size-md;
+            weight: $f-weight-bold;
           }
         line-height: 89%;
         border: none;
@@ -106,20 +155,37 @@
     align-items: center;
     gap: 155px;
     width: 100%;
-    background: linear-gradient(90deg, #edf6ef 0%, #52c368 100%);
+    background: linear-gradient(90deg, $dropdown-bd-color 0%, #52c368 100%);
     padding: 25px 22px 19px;
     position: relative;
+    @include max-screen(1024px){
+        gap: 100px;
+    }
+    @include max-screen(992px){
+        gap: 90px;
+    }
+    @include max-screen(834px){
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    @include max-screen(440px){
+        flex-direction: column;
+        gap: 20px;
+    }
 }
 .icon-info{
     display: flex;
     font: {
-        family: 'Cera Pro';
-        size: 14px;
-        weight: 400;
+        family: $main-font;
+        size: $f-size-reg;
+        weight: $f-weight-regular;
       }
     line-height: 157%;
-    color: #3d3d3d;
+    color: $text-color;
     gap: 10px;
+    @include max-screen(440px){
+        display: block;
+    }
     &:first-of-type{
         &::before{
             display: inline-block;
@@ -130,6 +196,50 @@
             position: absolute;
             left: 300px;
             bottom: 33px;
+            @include max-screen(1024px){
+                left: 245px;
+            }
+            @include max-screen(992px){
+                left: 235px;
+            }
+            @include max-screen(834px){
+                left: 285px;
+                top: 33px;
+            }
+            @include max-screen(820px){
+                left: 280px;
+            }
+            @include max-screen(800px){
+                left: 270px;
+            }
+            @include max-screen(768px){
+                left: 255px;
+            }
+            @include max-screen(440px){
+                left: 112px;
+                top: 93px;
+            }
+            @include max-screen(430px){
+                left: 105px;
+                }
+            @include max-screen(414px){
+                left: 100px;
+                bottom: 128px;
+            }
+            @include max-screen(390px){
+                left: 88px;
+                bottom: 120px;
+            }
+            @include max-screen(375px){
+                left: 80px;
+            }
+            @include max-screen(360px){
+                left: 75px;
+                bottom: 118px;
+            }
+            @include max-screen(320px){
+                left: 53px;
+            }
         }
     }
     &:nth-last-of-type(2){
@@ -139,6 +249,25 @@
             background-image: url(../images/mail.svg);
             width: 20px;
             height: 20px;
+            @include max-screen(440px){
+                position: absolute;
+                right: 305px;
+            }
+            @include max-screen(414px){
+                right: 292px;
+            }
+            @include max-screen(390px){
+                right: 282px;
+            }
+            @include max-screen(375px){
+                right: 275px;
+            }
+            @include max-screen(360px){
+                right: 265px;
+            }
+            @include max-screen(320px){
+                right: 245px;
+            }
         }
     }
     &:last-of-type{
@@ -148,37 +277,82 @@
             background-image: url(../images/call.svg);
             width: 20px;
             height: 20px;
+            @include max-screen(440px){
+                position: absolute;
+                right: 280px;
+            }
+            @include max-screen(414px){
+                right: 262px;
+            }
+            @include max-screen(390px){
+                right: 255px;
+            }
+            @include max-screen(375px){
+                right: 248px;
+            }
+            @include max-screen(360px){
+                right: 240px;
+            }
+            @include max-screen(320px){
+                right: 220px;
+            }
         }
     }
 }
 .part_bottom{
     display: flex;
     gap: 150px;
-    background-color: #fbfbfb;
+    background-color: $bg-color;
     padding: 33px 0 29px 25px;
     margin-bottom: 6px;
     border-bottom: 1px solid rgba(70, 163, 88, 0.2);
+    @include max-screen(1024px){
+        gap: 135px;
+    }
+    @include max-screen(834px){
+        gap: 70px;
+    }
+    @include max-screen(768px){
+        gap: 60px;
+    }
+    @include max-screen(440px){
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+    @include max-screen(390px){
+        gap: 35px;
+    }
+    @include max-screen(375px){
+        gap: 30px;
+    }
+    @include max-screen(360px){
+        gap: 18px;
+    }
+    @include max-screen(320px){
+        justify-content: center;
+        text-align: center;
+    }
     h3{
         font: {
-            family: 'Cera Pro';
-            size: 18px;
-            weight: 700;
+            family: $main-font;
+            size: $f-size-md;
+            weight: $f-weight-bold;
           }
         line-height: 89%;
-        color: #3d3d3d;
+        color: $text-color;
     }
     li{
         font: {
-            family: 'Cera Pro';
-            size: 14px;
-            weight: 400;
+            family: $main-font;
+            size: $f-size-reg;
+            weight: $f-weight-regular;
           }
         line-height: 214%;
         list-style: none;
     }
     a{
         text-decoration: none;
-        color: #3d3d3d;
+        color: $text-color;
     }
 }
 .footer_categories{
@@ -186,6 +360,11 @@
         margin-bottom: 8px;
     }
 } 
+@include max-screen(440px){
+        .social-pay_info{
+            margin: auto;
+        }
+}
 .social{
     h3{
         margin-bottom: 20px;
@@ -215,11 +394,11 @@
 }
 .copyright{
     font: {
-        family: 'Cera Pro';
-        size: 14px;
-        weight: 400;
+        family: $main-font;
+        size: $f-size-reg;
+        weight: $f-weight-regular;
       }
     line-height: 214%;
-    color: #3d3d3d;
+    color: $text-color;
     text-align: center;
 }

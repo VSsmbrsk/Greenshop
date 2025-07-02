@@ -1,9 +1,27 @@
 .shorts{
     max-width: 310px;
     height: 790px;
-    background-color: #fbfbfb;
+    background-color: $bg-color;
+    @include max-screen(834px){
+        display: flex;
+        justify-content: space-between;
+        height: auto;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    @include max-screen(440px){
+        margin: auto;
+        display: block;
+        max-width: 310px;
+    }
+    @include max-screen(430px){
+        margin-bottom: 20px;
+        }
     ul{
         padding: 14px 0 0 16px;
+        @include max-screen(834px){
+            padding-top: 20px;
+        }
 
     }
     li{
@@ -11,33 +29,39 @@
     }
     img{
         margin-top: 346px;
+        @include max-screen(834px){
+            margin-top: 0;
+        }
+        @include max-screen(440px){
+            margin-top: 346px;
+        }
     }
 }
 .categories{
     font: {
-        family: 'Cera Pro';
-        size: 18px;
+        family: $main-font;
+        size: $f-size-md;
         weight: bold;
       }
     line-height: 89%;
-    color: #3d3d3d;
+    color: $text-color;
     text-decoration: none;
 }
 .list__shorts{
     font: {
-        family: 'Cera Pro';
+        family: $main-font;
         size: 15px;
-        weight: 400;
+        weight: $f-weight-regular;
       }
     line-height: 267%;
     padding-left: 30px;  
     a{
         text-decoration: none;
-        color: #3d3d3d;
+        color: $text-color;
         transition: 0.3s;
         &:hover{
-            font-weight: 700;
-            color: #46a358;
+            font-weight: $f-weight-bold;
+            color: $primary-color;
         } 
     } 
 }
@@ -45,58 +69,74 @@
     display: flex;
     gap: 50px;
     margin-bottom: 20px;
+    @include max-screen(834px){
+        display: block;
+    }
 }
 .parent{
     max-width: 840px;
+    @include max-screen(834px){
+        padding: 0 20px;
+    }
 }
 .supplies_menu{
     display: flex;
     justify-content: space-between;
     width: 100%;
     margin-bottom: 31px;
+    @include max-screen(440px){
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 .menu__left{
+    @include max-screen(440px){
+        margin-bottom: 10px;
+    }
     ul{
         display: flex;
         gap: 37px;
+        @include max-screen(834px){
+            gap: 20px;
+        }
     }
     li{
         font: {
-            family: 'Cera Pro';
+            family: $main-font;
             size: 15px;
-            weight: 400;
+            weight: $f-weight-regular;
           }
         line-height: 107%;
-        color: #3d3d3d;
+        color: $text-color;
         list-style: none;
     }
     a{
         text-decoration: none;
-        color: #3d3d3d;
+        color: $text-color;
         &:hover{
-            font-weight: 700;
-            color: #46a358;
-            border-bottom: #46A358 solid 2px;
+            font-weight: $f-weight-bold;
+            color: $primary-color;
+            border-bottom: $primary-color solid 2px;
         }
     }
 }
 .text__right{
     font: {
-        family: 'Cera Pro';
+        family: $main-font;
         size: 15px;
-        weight: 400;
+        weight: $f-weight-regular;
       }
     line-height: 107%;
-    color: #3d3d3d;
+    color: $text-color;
     span{
         font: {
-            family: 'Cera Pro';
+            family: $main-font;
             size: 15px;
-            weight: 400;
+            weight: $f-weight-regular;
           }
         padding-left: 8px;
         line-height: 107%;
-        color: #3d3d3d;
+        color: $text-color;
     }
     &::after{
         display: inline-block;
@@ -114,6 +154,9 @@
     width: 100%;
     gap: 70px 33px;
     margin-bottom: 90px;
+    @include max-screen(834px){
+        gap: 30px;
+    }
     a{
         text-decoration: none;
     }
@@ -137,7 +180,7 @@
     overflow: hidden;
     border-top: 1px solid transparent;
     &:hover{
-        border-top: #46A358 solid 1px;
+        border-top: $primary-color solid 1px;
         ul{
             bottom: 60px;
             li{
@@ -205,7 +248,7 @@
 .supplies_div_card{
     width: 258px;
     height: 300px;
-    background-color: #fbfbfb;
+    background-color: $bg-color;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -213,44 +256,44 @@
 .name{
     display: block;
     font: {
-        family: 'Cera Pro';
-        size: 16px;
-        weight: 400;
+        family: $main-font;
+        size: $f-size-base;
+        weight: $f-weight-regular;
       }
     line-height: 100%;
-    color: #3d3d3d;
+    color: $text-color;
     padding-top: 12px;
 }
 .price{
     display: block;
     font: {
-        family: 'Cera Pro';
-        size: 18px;
-        weight: 700;
+        family: $main-font;
+        size: $f-size-md;
+        weight: $f-weight-bold;
       }
     line-height: 89%;
-    color: #46a358;
+    color: $primary-color;
     padding-top: 6px;
 }
 .off{
-    background-color: #46A358;
+    background-color: $primary-color;
     padding: 8px;
     position: absolute;
     top: 14px;
     left: 0;
     font: {
-        family: 'Cera Pro';
-        size: 16px;
-        weight: 500;
+        family: $main-font;
+        size: $f-size-base;
+        weight: $f-weight-medium;
       }
     line-height: 100%;
-    color: #fff;
+    color: $white;
 }
 .price_off{
     font: {
-        family: 'Cera Pro';
-        size: 18px;
-        weight: 400;
+        family: $main-font;
+        size: $f-size-md;
+        weight: $f-weight-regular;
       }
     line-height: 89%;
     color: #a5a5a5;
@@ -266,12 +309,12 @@
     }
     li{
         font: {
-            family: 'Cera Pro';
-            size: 18px;
-            weight: 300;
+            family: $main-font;
+            size: $f-size-md;
+            weight: $f-weight-light;
           }
         line-height: 89%;
-        color: #3d3d3d;
+        color: $text-color;
         list-style: none;  
     }
     a{
@@ -280,7 +323,7 @@
         align-items: center;
         border: 1px solid #e5e5e5;
         border-radius: 4px;
-        color: #3d3d3d;
+        color: $text-color;
         width: 35px;
         height: 35px;
         text-decoration: none;
@@ -290,13 +333,13 @@
 .numbers__link{
     &:hover{
         font: {
-            family: 'Cera Pro';
-            size: 18px;
-            weight: 700;
+            family: $main-font;
+            size: $f-size-md;
+            weight: $f-weight-bold;
           }
         line-height: 89%;
-        color: #fff;
-        background-color: #46A358;
+        color: $white;
+        background-color: $primary-color;
         svg{
             path{
                 stroke: white; 

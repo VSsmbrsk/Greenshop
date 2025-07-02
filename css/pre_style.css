@@ -96,7 +96,13 @@
   padding: 52px 100px 50px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border-bottom: 10px solid #46A358;
+  border-bottom: 10px solid #46a358;
+}
+
+@media screen and (max-width: 390px) {
+  .container__register {
+    padding: 52px 70px 50px;
+  }
 }
 
 .pic {
@@ -110,7 +116,7 @@
 
 .title {
   text-align: center;
-  font-family: 'Cera Pro';
+  font-family: "Cera Pro";
   font-weight: 500;
   font-size: 20px;
   line-height: 80%;
@@ -119,7 +125,7 @@
 }
 
 .letter {
-  font-family: 'Cera Pro';
+  font-family: "Cera Pro";
   font-weight: 250;
   font-size: 18px;
   line-height: 89%;
@@ -131,7 +137,7 @@
 }
 
 .text {
-  font-family: 'Cera Pro';
+  font-family: "Cera Pro";
   font-size: 13px;
   font-weight: 400;
   line-height: 123%;
@@ -159,9 +165,9 @@
   width: 100%;
   height: 45px;
   text-align: center;
-  background-color: #46A358;
+  background-color: #46a358;
   color: #fff;
-  font-family: 'Cera Pro';
+  font-family: "Cera Pro";
   font-size: 16px;
   font-weight: 700;
   border: none;
@@ -170,7 +176,7 @@
 }
 
 .desc {
-  font-family: 'Cera Pro';
+  font-family: "Cera Pro";
   font-size: 13px;
   font-weight: 400;
   line-height: 123%;
@@ -188,6 +194,36 @@
   height: 1px;
   position: absolute;
   bottom: 7px;
+}
+
+@media screen and (max-width: 440px) {
+  .desc::before, .desc::after {
+    width: 67px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .desc::before, .desc::after {
+    width: 55px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .desc::before, .desc::after {
+    width: 67px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .desc::before, .desc::after {
+    width: 60px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .desc::before, .desc::after {
+    width: 40px;
+  }
 }
 
 .desc::before {
@@ -212,7 +248,7 @@
   gap: 9px;
   border: 1px solid #eaeaea;
   border-radius: 5px;
-  font-family: 'Cera Pro';
+  font-family: "Cera Pro";
   font-size: 13px;
   font-weight: 500;
   line-height: 123%;
@@ -249,8 +285,35 @@ header {
   border-bottom: 1px solid rgba(70, 163, 88, 0.5);
 }
 
+@media screen and (max-width: 1024px) {
+  .box {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 20px;
+    padding: 0 15px;
+    margin-bottom: 15px;
+  }
+}
+
 .logo {
   margin-bottom: 17px;
+}
+
+@media screen and (max-width: 440px) {
+  .logo {
+    margin-bottom: 0;
+  }
 }
 
 .list__ul {
@@ -261,15 +324,34 @@ header {
   list-style: none;
 }
 
+@media screen and (max-width: 440px) {
+  .list__ul {
+    gap: 25px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .list__ul {
+    gap: 15px;
+  }
+}
+
 .list ul li::after {
   content: "";
   display: block;
   width: 0;
   height: 3px;
-  background-color: #46A358;
+  background-color: #46a358;
   margin-top: 22px;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+}
+
+@media screen and (max-width: 440px) {
+  .list ul li::after {
+    margin-top: 5px;
+  }
 }
 
 .list ul li:hover::after {
@@ -289,7 +371,7 @@ header {
   font-size: 16px;
   color: #3d3d3d;
   text-decoration: none;
-  font-family: 'Cera Pro';
+  font-family: "Cera Pro";
   line-height: 30px;
 }
 
@@ -297,7 +379,7 @@ header {
 .priming_submenu {
   font-weight: 400;
   font-size: 16px;
-  font-family: 'Cera Pro';
+  font-family: "Cera Pro";
   color: #3d3d3d;
   text-decoration: none;
   line-height: 30px;
@@ -306,6 +388,12 @@ header {
 .dropdown {
   position: relative;
   margin-bottom: -80px;
+}
+
+@media screen and (max-width: 440px) {
+  .dropdown {
+    margin-bottom: -75px;
+  }
 }
 
 .dropdown:hover .submenu {
@@ -320,6 +408,24 @@ header {
   list-style: none;
   display: none;
   z-index: 99;
+}
+
+@media screen and (max-width: 440px) {
+  .submenu {
+    position: static;
+    display: none;
+    margin-top: 5px;
+    background-color: #edf6ee;
+    border-radius: 6px;
+    min-width: 120px;
+  }
+}
+
+.submenu li {
+  background-color: #edf6ee;
+  padding: 7px 14px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .submenu li:hover {
@@ -355,6 +461,12 @@ header {
   top: 16px;
 }
 
+@media screen and (max-width: 440px) {
+  .arrows {
+    display: none;
+  }
+}
+
 .arrow-hover {
   display: none;
 }
@@ -367,6 +479,20 @@ header {
   display: none;
   z-index: 100;
   list-style: none;
+}
+
+@media screen and (max-width: 440px) {
+  .submenu_second {
+    position: static;
+    display: none;
+    background-color: #edf6ee;
+    min-width: inherit;
+  }
+}
+
+.submenu_second li {
+  background-color: #edf6ee;
+  padding: 7px 14px;
 }
 
 .submenu_second li:hover {
@@ -389,7 +515,7 @@ header {
   border-radius: 5px;
   font-weight: 500;
   font-size: 16px;
-  font-family: 'Cera Pro';
+  font-family: "Cera Pro";
   line-height: 123%;
   text-align: center;
   color: #fff;
@@ -413,8 +539,29 @@ header {
   margin-bottom: 26px;
 }
 
+@media screen and (max-width: 834px) {
+  .wrapper {
+    padding: 30px 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .wrapper {
+    width: 100%;
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .wrapper {
+    display: block;
+    padding: 20px;
+    text-align: center;
+  }
+}
+
 .wrapper h3 {
-  font-family: 'Cera Pro';
+  font-family: "Cera Pro";
   font-size: 14px;
   line-height: 114%;
   text-transform: uppercase;
@@ -423,7 +570,7 @@ header {
 }
 
 .wrapper h1 {
-  font-family: 'Cera Pro';
+  font-family: "Cera Pro";
   font-size: 70px;
   font-weight: 900;
   line-height: 100%;
@@ -438,7 +585,7 @@ header {
 .wrapper p {
   max-width: 560px;
   height: 45px;
-  font-family: 'Cera Pro';
+  font-family: "Cera Pro";
   font-size: 14px;
   font-weight: 400;
   line-height: 171%;
@@ -446,13 +593,37 @@ header {
   margin-bottom: 44px;
 }
 
+@media screen and (max-width: 834px) {
+  .wrapper p {
+    margin-bottom: 70px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .wrapper p {
+    margin-bottom: 85px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .wrapper p {
+    margin-bottom: 70px;
+  }
+}
+
 .texts {
   padding-left: 41px;
 }
 
+@media screen and (max-width: 440px) {
+  .texts {
+    padding: 0;
+  }
+}
+
 .link-shop {
   background-color: #46a358;
-  font-family: 'Cera Pro';
+  font-family: "Cera Pro";
   font-size: 16px;
   font-weight: 700;
   line-height: 125%;
@@ -474,14 +645,56 @@ header {
   max-width: 507px;
 }
 
+@media screen and (max-width: 440px) {
+  .frame {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .shorts {
   max-width: 310px;
   height: 790px;
   background-color: #fbfbfb;
 }
 
+@media screen and (max-width: 834px) {
+  .shorts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: auto;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .shorts {
+    margin: auto;
+    display: block;
+    max-width: 310px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .shorts {
+    margin-bottom: 20px;
+  }
+}
+
 .shorts ul {
   padding: 14px 0 0 16px;
+}
+
+@media screen and (max-width: 834px) {
+  .shorts ul {
+    padding-top: 20px;
+  }
 }
 
 .shorts li {
@@ -492,8 +705,20 @@ header {
   margin-top: 346px;
 }
 
+@media screen and (max-width: 834px) {
+  .shorts img {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .shorts img {
+    margin-top: 346px;
+  }
+}
+
 .categories {
-  font-family: 'Cera Pro';
+  font-family: "Cera Pro";
   font-size: 18px;
   font-weight: bold;
   line-height: 89%;
@@ -502,7 +727,7 @@ header {
 }
 
 .list__shorts {
-  font-family: 'Cera Pro';
+  font-family: "Cera Pro";
   font-size: 15px;
   font-weight: 400;
   line-height: 267%;
@@ -529,8 +754,20 @@ header {
   margin-bottom: 20px;
 }
 
+@media screen and (max-width: 834px) {
+  .market {
+    display: block;
+  }
+}
+
 .parent {
   max-width: 840px;
+}
+
+@media screen and (max-width: 834px) {
+  .parent {
+    padding: 0 20px;
+  }
 }
 
 .supplies_menu {
@@ -544,6 +781,22 @@ header {
   margin-bottom: 31px;
 }
 
+@media screen and (max-width: 440px) {
+  .supplies_menu {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .menu__left {
+    margin-bottom: 10px;
+  }
+}
+
 .menu__left ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -551,8 +804,14 @@ header {
   gap: 37px;
 }
 
+@media screen and (max-width: 834px) {
+  .menu__left ul {
+    gap: 20px;
+  }
+}
+
 .menu__left li {
-  font-family: 'Cera Pro';
+  font-family: "Cera Pro";
   font-size: 15px;
   font-weight: 400;
   line-height: 107%;
@@ -568,11 +827,11 @@ header {
 .menu__left a:hover {
   font-weight: 700;
   color: #46a358;
-  border-bottom: #46A358 solid 2px;
+  border-bottom: #46a358 solid 2px;
 }
 
 .text__right {
-  font-family: 'Cera Pro';
+  font-family: "Cera Pro";
   font-size: 15px;
   font-weight: 400;
   line-height: 107%;
@@ -580,7 +839,7 @@ header {
 }
 
 .text__right span {
-  font-family: 'Cera Pro';
+  font-family: "Cera Pro";
   font-size: 15px;
   font-weight: 400;
   padding-left: 8px;
@@ -611,6 +870,12 @@ header {
   width: 100%;
   gap: 70px 33px;
   margin-bottom: 90px;
+}
+
+@media screen and (max-width: 834px) {
+  .supplies {
+    gap: 30px;
+  }
 }
 
 .supplies a {
@@ -645,7 +910,7 @@ header {
 }
 
 .supplies_div:hover {
-  border-top: #46A358 solid 1px;
+  border-top: #46a358 solid 1px;
 }
 
 .supplies_div:hover ul {
@@ -709,7 +974,7 @@ header {
 
 .name {
   display: block;
-  font-family: 'Cera Pro';
+  font-family: "Cera Pro";
   font-size: 16px;
   font-weight: 400;
   line-height: 100%;
@@ -719,7 +984,7 @@ header {
 
 .price {
   display: block;
-  font-family: 'Cera Pro';
+  font-family: "Cera Pro";
   font-size: 18px;
   font-weight: 700;
   line-height: 89%;
@@ -728,12 +993,12 @@ header {
 }
 
 .off {
-  background-color: #46A358;
+  background-color: #46a358;
   padding: 8px;
   position: absolute;
   top: 14px;
   left: 0;
-  font-family: 'Cera Pro';
+  font-family: "Cera Pro";
   font-size: 16px;
   font-weight: 500;
   line-height: 100%;
@@ -741,7 +1006,7 @@ header {
 }
 
 .price_off {
-  font-family: 'Cera Pro';
+  font-family: "Cera Pro";
   font-size: 18px;
   font-weight: 400;
   line-height: 89%;
@@ -767,7 +1032,7 @@ header {
 }
 
 .numbers li {
-  font-family: 'Cera Pro';
+  font-family: "Cera Pro";
   font-size: 18px;
   font-weight: 300;
   line-height: 89%;
@@ -796,12 +1061,12 @@ header {
 }
 
 .numbers__link:hover {
-  font-family: 'Cera Pro';
+  font-family: "Cera Pro";
   font-size: 18px;
   font-weight: 700;
   line-height: 89%;
   color: #fff;
-  background-color: #46A358;
+  background-color: #46a358;
 }
 
 .numbers__link:hover svg path {
@@ -819,6 +1084,34 @@ header {
   margin-bottom: 138px;
 }
 
+@media screen and (max-width: 834px) {
+  .blog_find_more {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .blog_find_more {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .blog_find_more {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+}
+
 .blog {
   max-width: 586px;
   display: -webkit-box;
@@ -833,9 +1126,17 @@ header {
   background-color: #fbfbfb;
 }
 
+@media screen and (max-width: 390px) {
+  .blog {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+}
+
 .blog a {
   display: inline-block;
-  font-family: 'Cera Pro';
+  font-family: "Cera Pro";
   font-size: 14px;
   font-weight: 500;
   line-height: 143%;
@@ -871,8 +1172,15 @@ header {
   padding-right: 30px;
 }
 
+@media screen and (max-width: 390px) {
+  .find__more {
+    display: block;
+    text-align: center;
+  }
+}
+
 .find__more h3 {
-  font-family: 'Cera Pro';
+  font-family: "Cera Pro";
   font-size: 18px;
   font-weight: 900;
   line-height: 133%;
@@ -881,8 +1189,14 @@ header {
   color: #3d3d3d;
 }
 
+@media screen and (max-width: 390px) {
+  .find__more h3 {
+    text-align: center;
+  }
+}
+
 .find__more p {
-  font-family: 'Cera Pro';
+  font-family: "Cera Pro";
   font-size: 14px;
   font-weight: 400;
   line-height: 171%;
@@ -890,8 +1204,14 @@ header {
   color: #727272;
 }
 
+@media screen and (max-width: 390px) {
+  .find__more p {
+    text-align: center;
+  }
+}
+
 .our__blog_title {
-  font-family: 'Cera Pro';
+  font-family: "Cera Pro";
   font-size: 30px;
   font-weight: 700;
   line-height: 53%;
@@ -900,13 +1220,19 @@ header {
 }
 
 .our__blog_text {
-  font-family: 'Cera Pro';
+  font-family: "Cera Pro";
   font-size: 14px;
   font-weight: 400;
   line-height: 171%;
   text-align: center;
   color: #727272;
   margin: 15px 0 35px;
+}
+
+@media screen and (max-width: 440px) {
+  .our__blog_text {
+    padding: 0 10px;
+  }
 }
 
 .article__blogs {
@@ -923,6 +1249,16 @@ header {
   margin-bottom: 30px;
 }
 
+@media screen and (max-width: 1024px) {
+  .article__blogs {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .article {
   max-width: 268px;
   background-color: #fbfbfb;
@@ -930,7 +1266,7 @@ header {
 }
 
 .article span {
-  font-family: 'Cera Pro';
+  font-family: "Cera Pro";
   font-size: 14px;
   font-weight: 500;
   line-height: 114%;
@@ -939,7 +1275,7 @@ header {
 }
 
 .article h2 {
-  font-family: 'Cera Pro';
+  font-family: "Cera Pro";
   font-size: 20px;
   font-weight: 700;
   line-height: 130%;
@@ -948,7 +1284,7 @@ header {
 }
 
 .article p {
-  font-family: 'Cera Pro';
+  font-family: "Cera Pro";
   font-size: 14px;
   font-weight: 400;
   line-height: 157%;
@@ -958,7 +1294,7 @@ header {
 }
 
 .article a {
-  font-family: 'Cera Pro';
+  font-family: "Cera Pro";
   font-size: 14px;
   font-weight: 500;
   line-height: 114%;
@@ -977,7 +1313,7 @@ header {
 }
 
 .article a:hover {
-  font-family: 'Cera Pro';
+  font-family: "Cera Pro";
   font-size: 14px;
   font-weight: 500;
   line-height: 114%;
@@ -998,6 +1334,29 @@ header {
   position: relative;
 }
 
+@media screen and (max-width: 834px) {
+  .part_top {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .part_top {
+    gap: 50px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .part_top {
+    gap: 10px;
+    padding: 10px;
+  }
+}
+
 .part_top::before, .part_top::after {
   content: "";
   position: absolute;
@@ -1009,12 +1368,80 @@ header {
           transform: rotate(90deg);
 }
 
+@media screen and (max-width: 834px) {
+  .part_top::before, .part_top::after {
+    top: 127px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .part_top::before, .part_top::after {
+    display: none;
+  }
+}
+
 .part_top::before {
   left: 158px;
 }
 
+@media screen and (max-width: 1024px) {
+  .part_top::before {
+    left: 100px;
+    top: 135px;
+    width: 210px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .part_top::before {
+    left: 85px;
+    width: 220px;
+  }
+}
+
+@media screen and (max-width: 834px) {
+  .part_top::before {
+    left: 175px;
+    width: 195px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .part_top::before {
+    left: 155px;
+  }
+}
+
 .part_top::after {
   left: 423px;
+}
+
+@media screen and (max-width: 1024px) {
+  .part_top::after {
+    left: 305px;
+    top: 135px;
+    width: 210px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .part_top::after {
+    left: 280px;
+    width: 220px;
+  }
+}
+
+@media screen and (max-width: 834px) {
+  .part_top::after {
+    left: 445px;
+    width: 195px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .part_top::after {
+    left: 410px;
+  }
 }
 
 .card_description {
@@ -1026,7 +1453,7 @@ header {
 }
 
 .card_description h3 {
-  font-family: 'Cera Pro';
+  font-family: "Cera Pro";
   font-size: 17px;
   font-weight: 700;
   line-height: 94%;
@@ -1035,7 +1462,7 @@ header {
 }
 
 .card_description p {
-  font-family: 'Cera Pro';
+  font-family: "Cera Pro";
   font-size: 14px;
   font-weight: 400;
   line-height: 157%;
@@ -1047,7 +1474,7 @@ header {
 }
 
 .form_input h3 {
-  font-family: 'Cera Pro';
+  font-family: "Cera Pro";
   font-size: 18px;
   font-weight: 700;
   line-height: 89%;
@@ -1056,7 +1483,7 @@ header {
 }
 
 .form_input p {
-  font-family: 'Cera Pro';
+  font-family: "Cera Pro";
   font-size: 13px;
   font-weight: 400;
   line-height: 169%;
@@ -1077,7 +1504,7 @@ header {
           flex: 1;
   padding: 12px 14px;
   border: none;
-  font-family: 'Cera Pro';
+  font-family: "Cera Pro";
   font-size: 14px;
   border-radius: 6px;
   -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.06);
@@ -1103,9 +1530,9 @@ header {
 
 .footer_input button {
   padding: 12px 26px;
-  background-color: #46A358;
-  color: #FFF;
-  font-family: 'Cera Pro';
+  background-color: #46a358;
+  color: #fff;
+  font-family: "Cera Pro";
   font-size: 18px;
   font-weight: 700;
   line-height: 89%;
@@ -1122,22 +1549,60 @@ header {
           align-items: center;
   gap: 155px;
   width: 100%;
-  background: -webkit-gradient(linear, left top, right top, from(#edf6ef), to(#52c368));
-  background: linear-gradient(90deg, #edf6ef 0%, #52c368 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#edf6ee), to(#52c368));
+  background: linear-gradient(90deg, #edf6ee 0%, #52c368 100%);
   padding: 25px 22px 19px;
   position: relative;
+}
+
+@media screen and (max-width: 1024px) {
+  .gradient {
+    gap: 100px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .gradient {
+    gap: 90px;
+  }
+}
+
+@media screen and (max-width: 834px) {
+  .gradient {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .gradient {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+  }
 }
 
 .icon-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-family: 'Cera Pro';
+  font-family: "Cera Pro";
   font-size: 14px;
   font-weight: 400;
   line-height: 157%;
   color: #3d3d3d;
   gap: 10px;
+}
+
+@media screen and (max-width: 440px) {
+  .icon-info {
+    display: block;
+  }
 }
 
 .icon-info:first-of-type::before {
@@ -1151,6 +1616,89 @@ header {
   bottom: 33px;
 }
 
+@media screen and (max-width: 1024px) {
+  .icon-info:first-of-type::before {
+    left: 245px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .icon-info:first-of-type::before {
+    left: 235px;
+  }
+}
+
+@media screen and (max-width: 834px) {
+  .icon-info:first-of-type::before {
+    left: 285px;
+    top: 33px;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .icon-info:first-of-type::before {
+    left: 280px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .icon-info:first-of-type::before {
+    left: 270px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .icon-info:first-of-type::before {
+    left: 255px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .icon-info:first-of-type::before {
+    left: 112px;
+    top: 93px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .icon-info:first-of-type::before {
+    left: 105px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .icon-info:first-of-type::before {
+    left: 100px;
+    bottom: 128px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .icon-info:first-of-type::before {
+    left: 88px;
+    bottom: 120px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .icon-info:first-of-type::before {
+    left: 80px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .icon-info:first-of-type::before {
+    left: 75px;
+    bottom: 118px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .icon-info:first-of-type::before {
+    left: 53px;
+  }
+}
+
 .icon-info:nth-last-of-type(2)::before {
   display: inline-block;
   content: "";
@@ -1159,12 +1707,86 @@ header {
   height: 20px;
 }
 
+@media screen and (max-width: 440px) {
+  .icon-info:nth-last-of-type(2)::before {
+    position: absolute;
+    right: 305px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .icon-info:nth-last-of-type(2)::before {
+    right: 292px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .icon-info:nth-last-of-type(2)::before {
+    right: 282px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .icon-info:nth-last-of-type(2)::before {
+    right: 275px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .icon-info:nth-last-of-type(2)::before {
+    right: 265px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .icon-info:nth-last-of-type(2)::before {
+    right: 245px;
+  }
+}
+
 .icon-info:last-of-type::before {
   display: inline-block;
   content: "";
   background-image: url(../images/call.svg);
   width: 20px;
   height: 20px;
+}
+
+@media screen and (max-width: 440px) {
+  .icon-info:last-of-type::before {
+    position: absolute;
+    right: 280px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .icon-info:last-of-type::before {
+    right: 262px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .icon-info:last-of-type::before {
+    right: 255px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .icon-info:last-of-type::before {
+    right: 248px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .icon-info:last-of-type::before {
+    right: 240px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .icon-info:last-of-type::before {
+    right: 220px;
+  }
 }
 
 .part_bottom {
@@ -1178,8 +1800,61 @@ header {
   border-bottom: 1px solid rgba(70, 163, 88, 0.2);
 }
 
+@media screen and (max-width: 1024px) {
+  .part_bottom {
+    gap: 135px;
+  }
+}
+
+@media screen and (max-width: 834px) {
+  .part_bottom {
+    gap: 70px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .part_bottom {
+    gap: 60px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .part_bottom {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 50px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .part_bottom {
+    gap: 35px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .part_bottom {
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .part_bottom {
+    gap: 18px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .part_bottom {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
+}
+
 .part_bottom h3 {
-  font-family: 'Cera Pro';
+  font-family: "Cera Pro";
   font-size: 18px;
   font-weight: 700;
   line-height: 89%;
@@ -1187,7 +1862,7 @@ header {
 }
 
 .part_bottom li {
-  font-family: 'Cera Pro';
+  font-family: "Cera Pro";
   font-size: 14px;
   font-weight: 400;
   line-height: 214%;
@@ -1201,6 +1876,12 @@ header {
 
 .footer_categories h3 {
   margin-bottom: 8px;
+}
+
+@media screen and (max-width: 440px) {
+  .social-pay_info {
+    margin: auto;
+  }
 }
 
 .social h3 {
@@ -1240,7 +1921,7 @@ header {
 }
 
 .copyright {
-  font-family: 'Cera Pro';
+  font-family: "Cera Pro";
   font-size: 14px;
   font-weight: 400;
   line-height: 214%;

@@ -2,57 +2,81 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #fbfbfb;
+    background-color: $bg-color;
     margin-bottom: 26px;
+    @include max-screen(834px){
+        padding: 30px 0;
+      }
+    @include max-screen(800px){
+        width: 100%;
+        overflow: hidden;
+      }
+    @include max-screen(440px){
+        display: block;
+        padding: 20px;
+        text-align: center;
+      }
     h3{
         font: {
-            family: 'Cera Pro';
-            size: 14px;
+            family: $main-font;
+            size: $f-size-reg;
           }
         line-height: 114%;
         text-transform: uppercase;
-        color: #3d3d3d;
+        color: $text-color;
         margin-bottom: 7px;
     }
     h1{
         font: {
-            family: 'Cera Pro';
+            family: $main-font;
             size: 70px;
-            weight: 900;
+            weight: $f-weight-black;
           }
         line-height: 100%;
         text-transform: uppercase;
-        color: #3d3d3d; 
+        color: $text-color; 
     }
     span{
-        color: #46a358;
+        color: $primary-color;
     }
     p{
         max-width: 560px; 
         height: 45px;
         font: {
-            family: 'Cera Pro';
-            size: 14px;
-            weight: 400;
+            family: $main-font;
+            size: $f-size-reg;
+            weight: $f-weight-regular;
           }
         line-height: 171%;
-        color: #727272;
+        color: $muted-text-color;
         margin-bottom: 44px;
+        @include max-screen(834px){
+            margin-bottom: 70px;
+          }
+        @include max-screen(800px){
+            margin-bottom: 85px;
+          }
+        @include max-screen(375px){
+            margin-bottom: 70px;
+          }
     }
 }
 .texts{
     padding-left: 41px;
+    @include max-screen(440px){
+        padding: 0;
+      }
 }
 .link-shop{
-    background-color: #46a358;
+    background-color: $primary-color;
     font: {
-        family: 'Cera Pro';
-        size: 16px;
-        weight: 700;
+        family: $main-font;
+        size: $f-size-base;
+        weight: $f-weight-bold;
       }
     line-height: 125%;
     text-transform: uppercase; 
-    color: #fff;
+    color: $white;
     border: none; 
     border-radius: 5px;
     padding: 11px 27px;
@@ -62,4 +86,7 @@
     display: flex;
     align-items: flex-end;
     max-width: 507px;
+    @include max-screen(440px){
+        justify-content: center;
+      }
 }

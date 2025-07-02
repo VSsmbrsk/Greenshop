@@ -1,23 +1,26 @@
 .our__blog_title{
     font: {
-        family: 'Cera Pro';
+        family: $main-font;
         size: 30px;
-        weight: 700;
+        weight: $f-weight-bold;
       }
     line-height: 53%;
     text-align: center;
-    color: #3d3d3d;
+    color: $text-color;
 }
 .our__blog_text{
     font: {
-        family: 'Cera Pro';
-        size: 14px;
-        weight: 400;
+        family: $main-font;
+        size: $f-size-reg;
+        weight: $f-weight-regular;
       }
     line-height: 171%;
     text-align: center;
-    color: #727272;
+    color: $muted-text-color;
     margin: 15px 0 35px;
+    @include max-screen(440px){
+        padding: 0 10px;
+    }
 }
 .article__blogs{
     display: flex;
@@ -25,50 +28,54 @@
     align-items: center;
     gap: 42px;
     margin-bottom: 30px;
+    @include max-screen(1024px){
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 .article{
     max-width: 268px;
-    background-color: #fbfbfb;
+    background-color: $bg-color;
     padding-bottom: 12px;
     span{
         font: {
-            family: 'Cera Pro';
-            size: 14px;
-            weight: 500;
+            family: $main-font;
+            size: $f-size-reg;
+            weight: $f-weight-medium;
           }
         line-height: 114%;
-        color: #46a358;
+        color: $primary-color;
         padding-left: 15px;
     }
     h2{
         font: {
-            family: 'Cera Pro';
+            family: $main-font;
             size: 20px;
-            weight: 700;
+            weight: $f-weight-bold;
           }
         line-height: 130%;
-        color: #3d3d3d;
+        color: $text-color;
         padding-left: 15px;
     }
     p{
         font: {
-            family: 'Cera Pro';
-            size: 14px;
-            weight: 400;
+            family: $main-font;
+            size: $f-size-reg;
+            weight: $f-weight-regular;
           }
         line-height: 157%;
-        color: #727272;
+        color: $muted-text-color;
         max-width: 242px;
         padding: 0 0 9px 15px; 
     }
     a{
         font: {
-            family: 'Cera Pro';
-            size: 14px;
-            weight: 500;
+            family: $main-font;
+            size: $f-size-reg;
+            weight: $f-weight-medium;
           }
         line-height: 114%;
-        color: #3d3d3d;
+        color: $text-color;
         text-decoration: none;
         padding-left: 15px;
         &::after{
@@ -81,12 +88,12 @@
         }
         &:hover{
             font: {
-                family: 'Cera Pro';
-                size: 14px;
-                weight: 500;
+                family: $main-font;
+                size: $f-size-reg;
+                weight: $f-weight-medium;
               }
             line-height: 114%;
-            color: #46a358;
+            color: $primary-color;
             &::after{
                 background-image: url(../images/Arrow_green.svg);
             }
